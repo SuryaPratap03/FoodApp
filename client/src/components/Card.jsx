@@ -144,7 +144,7 @@ const Card = ({ dish, isfavourites, iscart, user, setUser, handlegetfavourites }
     };
 
     return (
-        <div className="flex justify-center">
+        <div className="flex justify-center "> 
             <div className="max-w-md rounded-lg overflow-hidden shadow-lg m-4 bg-gray-800 transition-transform duration-300 transform hover:scale-105">
                 {/* Dish Image */}
                 <NavLink key={dish._id} to={`/cardDetails/${dish._id}`} className="block">
