@@ -13,7 +13,7 @@ const Signup = ({ setUser,fetchUser }) => {
     setErrorMessage(''); // Clear previous error messages
 
     try {
-      const response = await fetch('http://localhost:1000/api/signup', {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/signup`, {
         method: 'POST',
         credentials: 'include',
         headers: {
