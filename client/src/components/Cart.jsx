@@ -5,7 +5,7 @@ const Cart = ({ user }) => {
 
     const handleGetCart = async () => {
         try {
-            const response = await fetch('http://localhost:1000/api/cart', {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/cart`, {
                 method: 'GET',
                 credentials: 'include'
             });
@@ -22,7 +22,7 @@ const Cart = ({ user }) => {
 
     const handleRemoveFromCart = async (dishId) => {
         try {
-            const response = await fetch(`http://localhost:1000/api/cart/remove/${dishId}`, {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/cart/remove/${dishId}`, {
                 method: 'POST',
                 credentials: 'include'
             });
