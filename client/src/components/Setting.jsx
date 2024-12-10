@@ -29,7 +29,7 @@ const Setting = ({ user, setUser }) => {
     }
 
     try {
-      const response = await fetch('http://localhost:1000/api/edituser', {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/edituser`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
