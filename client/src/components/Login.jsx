@@ -9,7 +9,7 @@ const Login = ({ setUser }) => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:1000/api/login', {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/login`, {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
