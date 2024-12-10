@@ -30,7 +30,7 @@ const Signup = ({ setUser,fetchUser }) => {
         navigate('/'); // Navigate to home after successful signup
         alert(`Welcome ${data.user.username}, your account has been created!`);
       } else {
-        setErrorMessage(data.message || 'Signup failed, please try again.');
+        setErrorMessage(`Signup failed, ${data}`);
         console.error("Signup failed:", data);
       }
     } catch (error) {
