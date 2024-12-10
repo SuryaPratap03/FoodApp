@@ -9,7 +9,7 @@ export const VerifyToken = (req, res, next) => {
         return res.status(401).json({ message: 'No token found, authorization denied.' });
     }
 
-    const secretKey = process.env.secretkey;
+    const secretKey = process.env.SECRETKEY;
     jwt.verify(token, secretKey, (err, decoded) => {
         if (err) {
             return res.status(401).json({ error: 'Invalid token, authorization denied.' });
