@@ -15,7 +15,7 @@ const CardDetails = ({ allDishes, user, setUser }) => {
     // Fetch dish details
     const fetchDishDetails = async () => {
         try {
-            const response = await fetch(`http://localhost:1000/api/dishes/${id}`, {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/dishes/${id}`, {
                 method: 'GET',
                 credentials: 'include',
             });
@@ -66,7 +66,7 @@ const CardDetails = ({ allDishes, user, setUser }) => {
     const handleAddToCart = async () => {
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:1000/api/cart/add/${dish._id}`, {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/cart/add/${dish._id}`, {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
@@ -97,7 +97,7 @@ const CardDetails = ({ allDishes, user, setUser }) => {
     const handleAddToFavourites = async () => {
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:1000/api/favourites/add/${dish._id}`, {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/favourites/add/${dish._id}`, {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
@@ -127,7 +127,7 @@ const CardDetails = ({ allDishes, user, setUser }) => {
     const handleRemoveFromFavourites = async () => {
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:1000/api/favourites/remove/${dish._id}`, {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/favourites/remove/${dish._id}`, {
                 method: 'POST',
                 credentials: 'include',
             });
