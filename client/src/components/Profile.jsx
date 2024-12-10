@@ -10,7 +10,7 @@ const Profile = ({ setUser, user, fetchUser }) => {
 
     const handleLogout = async () => {
         try {
-            const response = await fetch('http://localhost:1000/api/logout', {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/logout`, {
                 method: 'DELETE',
                 credentials: 'include',
             });
