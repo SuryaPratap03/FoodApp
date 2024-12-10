@@ -19,6 +19,7 @@ const Login = ({ setUser }) => {
             });
 
             const data = await response.json();
+            
             if (response.ok) {
                 // Update the user state in the App component
                 setUser(data.user);
@@ -26,7 +27,7 @@ const Login = ({ setUser }) => {
                 navigate('/');
                 alert(`Welcome back ${data.user.username}`);
             } else {
-                alert('Login failed');
+                alert(`Login failed ${data}`);
             }
         } catch (error) {
             console.log(error);
