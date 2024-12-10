@@ -6,7 +6,7 @@ const Favourites = ({ user, setUser }) => {
 
     const handlegetfavourites = async () => {
         try {
-            const response = await fetch('http://localhost:1000/api/favourites', {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/favourites`, {
                 method: 'GET',
                 credentials: 'include'
             });
