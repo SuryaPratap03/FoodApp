@@ -27,7 +27,7 @@ const Navbar = ({ user = null }) => {
                   isActive ? "font-bold border-b-2 border-white" : ""
                 }`
               }
-            >
+              >
               Profile
             </NavLink>
           ) : ( // If user is not logged in
