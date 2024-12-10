@@ -10,7 +10,7 @@ const Home = ({ user, setUser }) => {
     const fetchAllDishes = async () => {
         setLoading(true);
         try {
-            const response = await fetch('http://localhost:1000/api/dishes', {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/dishes`, {
                 method: 'GET',
                 credentials: 'include',
             });
